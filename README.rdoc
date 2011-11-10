@@ -1,8 +1,24 @@
 = DESCRIPTION:
+Chef cookbook for Apache Tomcat in clustered environment
 
 = REQUIREMENTS:
+Linux Debian (currently tested on squeeze)
 
 = ATTRIBUTES:
+node.default[:installPath] - path to install tomcat
+node.default[:tomcatPath] - full tomcat path after installation
+node.default[:serverPort] - by default 8005
+node.default[:connectorPort] - by default 8080
+node.default[:ajpPort] - by default 8009
+node.default[:hostIP] - use the host address
+node.default[:multicastIP] - by default "228.0.0.4"
+node.default[:multicastPort] - by default 45564
+node.default[:nioAddress] - use the host address
+node.default[:nioPort] - by default 4000
+node.default[:tempDir] - temp dir for deploying
+node.default[:deployDir] - dir to deploy WARs
+node.default[:watchDir] - dir to watch WARs
 
 = USAGE:
-
+Recipe could be checked using chef-solo utility. All the attributes could be passed via son string.
+For more information see opscode tutorials.
