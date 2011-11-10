@@ -1,0 +1,13 @@
+node.default[:installPath] = "/home/paas"
+node.default[:tomcatPath] = "/home/paas/apache-tomcat-7.0.11"
+node.default[:serverPort] = 8005
+node.default[:connectorPort] = 8080
+node.default[:ajpPort] = 8009
+node.default[:hostIP] = "192.168.240.45"
+node.default[:multicastIP] = "228.0.0.4"
+node.default[:multicastPort] = 45564
+node.default[:nioAddress] = "192.168.240.45"
+node.default[:nioPort] = 4000
+node.default[:tempDir] = "/home/paas/apache-tomcat-7.0.11/webapps/"
+node.default[:deployDir] = "/home/paas/apache-tomcat-7.0.11/webapps/"
+node.default[:watchDir] = "/tmp/war-listen/"
