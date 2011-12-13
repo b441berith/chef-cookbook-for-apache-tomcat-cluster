@@ -5,7 +5,7 @@ Chef cookbook for Apache Tomcat in clustered environment
 Linux Debian (currently tested on squeeze)
 
 = ATTRIBUTES:
-<pre>
+
 node.default[:installPath] - path to install tomcat
 node.default[:tomcatPath] - full tomcat path after installation
 node.default[:serverPort] - by default 8005
@@ -19,7 +19,6 @@ node.default[:nioPort] - by default 4000
 node.default[:tempDir] - temp dir for deploying
 node.default[:deployDir] - dir to deploy WARs
 node.default[:watchDir] - dir to watch WARs
-</pre>
 
 = USAGE:
 Recipe could be checked using chef-solo utility. All the attributes could be passed via son string.
