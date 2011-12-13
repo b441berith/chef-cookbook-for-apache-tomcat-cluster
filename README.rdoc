@@ -21,4 +21,28 @@ node.default[:watchDir] - dir to watch WARs
 
 = USAGE:
 Recipe could be checked using chef-solo utility. All the attributes could be passed via son string.
+
+Create node.json file. Example:
+
+{
+  "installPath":"/home/paas",
+  "tomcatPath":"/home/paas/apache-tomcat-7.0.11",
+  "serverPort":8005,
+  "connectorPort":8080,
+  "ajpPort":8009,
+  "hostIP":"192.168.240.126",
+  "multicastIP":"228.0.0.4",
+  "multicastPort":45564,
+  "nioAddress":"192.168.240.126",
+  "nioPort":4000,
+  "tempDir":"/home/paas/apache-tomcat-7.0.11/webapps/",
+  "deployDir":"/home/paas/apache-tomcat-7.0.11/webapps/",
+  "watchDir":"/tmp/war-listen/",
+  "run_list": [ "recipe[apache-tomcat::default]" ]
+}
+
+Run chef-solo utility:
+
+chef-solo -c ~/solo.rb -j ~/node.json
+
 For more information see opscode tutorials.
